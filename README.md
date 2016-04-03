@@ -6,6 +6,7 @@ FOSSEE project internship coding assessment
 Part A:
 
 ####Changing Properties
+Option2,Option3 has no functionality. It was just asked to have 3 options<br /><br />
 
 In cmd,<br />
 cd PartA/Changing\ Properties/out/Production/Changing\ Properties<br /> 
