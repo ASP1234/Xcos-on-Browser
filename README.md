@@ -11,6 +11,9 @@ Option2,Option3 has no functionality. It was just asked to have 3 options<br /><
 In cmd,<br />
 cd PartA/Changing\ Properties/out/Production/Changing\ Properties<br /> 
 java com.nimishs.Main<br /> 
+<br /><br />
+Double Click on the packEx.jar located in Production folder to run app
+
 
 ####Student Ranking System
 
