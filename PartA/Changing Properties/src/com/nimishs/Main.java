@@ -4,11 +4,16 @@ import java.awt.*;
 import java.awt.event.*;
 import java.lang.reflect.Field;
 
+/**
+ * Created by NMSH on 03-04-2016.
+ */
+
 public class Main {
 
     JFrame mainFrame=new JFrame("Changing Properties");
     JLabel propertyLabel;
     final JMenuBar menuBar = new JMenuBar();
+    JMenuItem properties;
 
     public static void main(String[] args) {
 	// write your code here
@@ -24,7 +29,7 @@ public class Main {
         try {
             Field field = Class.forName("java.awt.Color").getField(value);
             color = (Color)field.get(null);
-        } catch (Exception ex2) {
+        } catch (Exception ex) {
             color = null; // Not defined
 
         }
@@ -54,20 +59,25 @@ public class Main {
         propertyLabel=new JLabel("Changing Properties",JLabel.CENTER);
         propertyLabel.setOpaque(true);
         mainFrame.add(propertyLabel,BorderLayout.CENTER);
+
+        JMenu menu=new JMenu("Configure");
+        properties=new JMenuItem("Properties");
+        JMenuItem option2=new JMenuItem("Option2");
+        JMenuItem option3=new JMenuItem("Option3");
+
+        menu.add(properties);
+        menu.add(option2);
+        menu.add(option3);
+        menuBar.add(menu);
+        menuBar.setVisible(false);
+        mainFrame.setJMenuBar(menuBar);
+
         propertyLabel.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 if(e.getButton()==MouseEvent.BUTTON3)
                 {
-                    JMenu menu=new JMenu("Configure");
-                    JMenuItem properties=new JMenuItem("Properties");
-                    JMenuItem option2=new JMenuItem("Option2");
-                    JMenuItem option3=new JMenuItem("Option3");
-
-                    menu.add(properties);
-                    menu.add(option2);
-                    menu.add(option3);
-
+                    menuBar.setVisible(true);
                     properties.addActionListener(new ActionListener() {
                         @Override
                         public void actionPerformed(ActionEvent e) {
@@ -84,12 +94,10 @@ public class Main {
 
                         }
                     });
-
-                    menuBar.add(menu);
-                    mainFrame.setJMenuBar(menuBar);
-
-
                 }
+
+                else
+                    menuBar.setVisible(false);
             }
 
             @Override
