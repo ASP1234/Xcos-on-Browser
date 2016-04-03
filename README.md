@@ -1,21 +1,23 @@
 # Xcos-on-Browser
 FOSSEE project internship coding assessment
 
-Instructions:
+###Instructions:
 
 Part A:
 
-1. Changing Properties
+####Changing Properties
 
-Goto PartA/Changing\ Properties/out/Production/Changing\ Properties
-In cmd,
-type:
-java com.nimishs.Main
+In cmd,<br />
+cd PartA/Changing\ Properties/out/Production/Changing\ Properties<br /> 
+java com.nimishs.Main<br /> 
 
-2. Student Ranking System
+####Student Ranking System
 
-Goto PartA/Student\ Ranking\ System/out/Production/Student\ Ranking\ System
-In cmd,
-type:
-java com.nimishs.Main
+NOTE: I have assummed we have to make a command line application for this problem where user will enter the details.<br /><br />
+In cmd,<br />
+cd PartA/Student\ Ranking\ System/out/Production/Student\ Ranking\ System<br />
+java com.nimishs.Main</br>
+
+######NOTE:
+I have followed standard approach putting class files in out dir and src files in src dir. I have used StackOverflow, Oracle docs as my reference.
 
