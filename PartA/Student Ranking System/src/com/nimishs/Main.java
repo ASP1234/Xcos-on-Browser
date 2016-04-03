@@ -20,6 +20,31 @@ public class Main {
         getStudents();
     }
 
+    public int getInt()
+    {
+        int userInput;
+
+        while(true)
+        {
+            try {
+                userInput = Integer.parseInt(reader.next());
+
+                if(userInput>=0)
+                    break;
+                else
+                    System.out.println("Invalid input");
+
+            } catch (NumberFormatException ignore) {
+                System.out.println("Invalid input");
+
+            }
+        }
+
+        return userInput;
+
+    }
+
+
     public void getStudents()
     {
 
@@ -49,15 +74,15 @@ public class Main {
         int[] marks=new int[5];
 
         System.out.println("Enter Language 1 Marks: ");
-        marks[3]=reader.nextInt();
+        marks[3]=getInt();
         System.out.println("Enter Language 2 Marks: ");
-        marks[4]=reader.nextInt();
+        marks[4]=getInt();
         System.out.println("Enter Maths Marks: ");
-        marks[0]=reader.nextInt();
+        marks[0]=getInt();
         System.out.println("Enter Science Marks: ");
-        marks[1]=reader.nextInt();
+        marks[1]=getInt();
         System.out.println("Enter Environmental Science Marks: ");
-        marks[2]=reader.nextInt();
+        marks[2]=getInt();
 
         Student stu=new Student(name,roll,marks);
         StudentSet.add(stu);
